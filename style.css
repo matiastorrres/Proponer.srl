@@ -41,6 +41,7 @@ h2 {
   margin: 0;
   font-size: 1.5rem;
   background-color: #efefef;
+  color: #a43f48;
 }
 
 h3 {
@@ -103,6 +104,7 @@ ul {
 }
 .header h1 {
   display: none;
+  color: #a43f48;
 }
 .header > .container {
   display: flex;
@@ -174,7 +176,7 @@ ul {
 }
 .menu a:hover {
   color: white;
-  background-color: blue;
+  background-color: #a43f48;
 }
 @media screen and (min-width: 1024px) {
   .menu-btn {
@@ -184,6 +186,7 @@ ul {
     position: static;
     width: auto;
     flex-direction: row;
+    align-items: center;
     opacity: 1;
     pointer-events: auto;
     background-color: transparent;
@@ -191,8 +194,9 @@ ul {
   }
   .menu a {
     padding: 0 1rem;
-    color: #000;
     font-size: 1.5rem;
+    color: #000;
+    color: #a43f48;
   }
   .menu a:last-child {
     padding-right: 0;
@@ -200,6 +204,7 @@ ul {
   .menu a:hover {
     color: gray;
     background-color: transparent;
+    color: #000;
   }
 }
 /*secciones*/
@@ -727,6 +732,7 @@ ul {
   color: #fff;
   background-color: none;
   top: 15rem;
+  color: #efefef;
 }
 
 .video video {
