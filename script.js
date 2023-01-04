@@ -1,5 +1,4 @@
 /*btn-menu*/
-
 ((d) => {
   const $btnMenu = d.querySelector(".menu-btn");
   const $menu = d.querySelector(".menu");
@@ -71,39 +70,18 @@
   });
 })();
 
-/* slider-cliente */
-(() => {
-  const $sliderClient = document.getElementById("slider-client");
-  const start = () => {
-    setInterval(() => {
-      if (window.innerWidth < 400) {
-        if ($sliderClient.scrollLeft > 1800)
-          return ($sliderClient.scrollLeft = 0);
-        $sliderClient.scrollLeft += 300;
-      } else {
-        if ($sliderClient.scrollLeft > 1600)
-          return ($sliderClient.scrollLeft = 0);
-        $sliderClient.scrollLeft += 400;
-      }
-    }, 3000);
-  };
-  start();
-})();
-
-/* slider-work */
-(() => {
-  const $sliderWork = document.getElementById("slider-work");
-  const start = () => {
-    setInterval(() => {
-      if (window.innerWidth < 400) {
-        if ($sliderWork.scrollLeft > 1400) return ($sliderWork.scrollLeft = 0);
-        return ($sliderWork.scrollLeft += 280);
-      } else {
-        if ($sliderWork.scrollLeft === 1200)
-          return ($sliderWork.scrollLeft = 0);
-        return ($sliderWork.scrollLeft += 300);
-      }
-    }, 3000);
-  };
-  start();
-})();
+// var swiper = new Swiper(".mySwiper", {
+//   slidesPerView: 3,
+//   spaceBetween: 30,
+//   slidesPerGroup: 3,
+//   loop: true,
+//   loopFillGroupWithBlank: true,
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//   },
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+// });
