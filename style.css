@@ -1,51 +1,3 @@
-/* ********** Custom Properties ********** */
-:root {
-  --max-width: 1200px;
-  --header-height: 4rem;
-}
-
-/* ********** Reset ********** */
-
-html {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
-
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-}
-
-body {
-  margin: 0;
-  overflow-x: hidden;
-}
-
-/* a {
-  color: #000;
-  transition: all 0.5s ease-out;
-} */
-
-/* a:hover {
-  opacity: 0.75;
-} */
-
-/* para eliminar la barra de desplazamiento horizontal que generan la imagenes grandes*/
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.none {
-  display: none;
-}
 /* ********** HeroImage ********** */
 /* .hero-image {
   background-image: var(--hero-image);
@@ -69,6 +21,60 @@ ul {
   font-size: 7.5vw;
   color: #fff;
 } */
+
+/* ********** Custom Properties ********** */
+@font-face {
+  font-family: bankGothic;
+  src: url(assets/bankrus.ttf);
+}
+:root {
+  --max-width: 1200px;
+  --header-height: 4rem;
+}
+
+/* ********** Reset ********** */
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  /* background-color: #403060;
+  background-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; */
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* para eliminar la barra de desplazamiento horizontal que generan la imagenes grandes*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.none {
+  display: none;
+}
 
 /********** video**************/
 .video {
@@ -118,9 +124,6 @@ ul {
   height: var(--header-height);
   border-top: 1px black solid;
 }
-.header h1 {
-  display: none;
-}
 .header > .container {
   display: flex;
   justify-content: space-between;
@@ -161,6 +164,7 @@ ul {
     justify-content: center;
     align-items: center;
     height: inherit;
+    color: #a43f48;
   }
   .logo {
     display: none;
@@ -171,6 +175,7 @@ ul {
     font-size: 2rem;
   }
 }
+
 /* ********** Menu ********** */
 .menu {
   position: fixed;
@@ -184,9 +189,8 @@ ul {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s ease;
-  justify-content: space-evenly;
+  justify-content: center;
 }
-/* aca estoy declarando que donde esta declarada la clase "menu" estoy agregando otra clase */
 .menu.is-active {
   opacity: 1;
   pointer-events: auto;
@@ -202,7 +206,7 @@ ul {
   font-weight: bold;
   text-align: center;
   text-decoration: none;
-  color: #000;
+  color: #a43f48;
 }
 
 @media screen and (min-width: 768px) {
@@ -239,6 +243,7 @@ ul {
 }
 
 /*secciones*/
+
 .section {
   background-color: #fff;
   width: 100vw;
@@ -538,6 +543,7 @@ ul {
   width: 90%;
   height: 90%;
   object-fit: cover;
+  cursor: pointer;
 }
 .brands {
   height: 25vh;
@@ -665,6 +671,9 @@ ul {
   align-items: center;
   background-color: #efefef;
 }
+.logo-map {
+  width: 50px;
+}
 .information {
   padding: 0 1rem;
   width: inherit;
@@ -703,7 +712,8 @@ ul {
     align-items: flex-start;
   }
   .map h2 {
-    margin-bottom: 7rem;
+    margin-bottom: 3rem;
+    color: #a43f48;
   }
   .contact h2 {
     margin-bottom: 5rem;
