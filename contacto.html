@@ -32,7 +32,7 @@
   <meta property="og:image:width" content="300">
   <meta property="og:image:height" content="300">
   <!-- hoja de estilos -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contacto.css">
   <!-- iconos de bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
@@ -136,7 +136,7 @@
         <div class="flat">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3349.5446277246438!2d-68.7992870841416!3d-32.910206077375975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e0f632c45db77%3A0x2848d7256535bcb0!2sPROPONER%20SRL!5e0!3m2!1ses-419!2sar!4v1668895232798!5m2!1ses-419!2sar"
-            width="343" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+            width="343" height="200" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </article>
@@ -144,29 +144,28 @@
   </section>
 
   <!-- marcas -->
-
-  <article class="brands">
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="assets/marcas/m1.png" alt="brands"></div>
-        <div class="swiper-slide"><img src="assets/marcas/m2.png" alt="brands"></div>
-        <div class="swiper-slide"><img src="assets/marcas/m3.png" alt="brands"></div>
-        <div class="swiper-slide"><img src="assets/marcas/m4.png" alt="brands"></div>
-        <div class="swiper-slide"><img src="assets/marcas/m5.png" alt="brands"></div>
-        <div class="swiper-slide"><img src="assets/marcas/m6.png" alt="brands"></div>
-        <div class="swiper-slide"><img src="assets/marcas/m7.png" alt="brands"></div>
-        <div class="swiper-slide"><img src="assets/marcas/m8.png" alt="brands"></div>
-      </div>
+  <!-- <article class="brands"> -->
+  <section class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="assets/marcas/m1.png" alt="brands"></div>
+      <div class="swiper-slide"><img src="assets/marcas/m2.png" alt="brands"></div>
+      <div class="swiper-slide"><img src="assets/marcas/m3.png" alt="brands"></div>
+      <div class="swiper-slide"><img src="assets/marcas/m4.png" alt="brands"></div>
+      <div class="swiper-slide"><img src="assets/marcas/m5.png" alt="brands"></div>
+      <div class="swiper-slide"><img src="assets/marcas/m6.png" alt="brands"></div>
+      <div class="swiper-slide"><img src="assets/marcas/m7.png" alt="brands"></div>
+      <div class="swiper-slide"><img src="assets/marcas/m8.png" alt="brands"></div>
     </div>
-  </article>
+  </section>
+  <!-- </article> -->
 
   <script src="script.js"></script>
   <!-- swiper js averiguar poque no sirve el export -->
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script>
     var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 4,
-      spaceBetween: 25,
+      slidesPerView: 8,
+      spaceBetween: 0,
       centerSlide: true,
       fade: true,
       gragCursor: true,
@@ -181,23 +180,23 @@
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
+      autoplay: {
+        delay: 1000,
+      },
       breakpoints: {
         0: {
-          slidesPerView: 1,
-        },
-        520: {
-          slidesPerView: 2,
-        },
-        768: {
           slidesPerView: 3,
         },
+        520: {
+          slidesPerView: 5,
+        },
+        768: {
+          slidesPerView: 6,
+        },
         992: {
-          slidesPerView: 4,
+          slidesPerView: 8,
         }
-      },
-      autoplay: {
-        delay: 3000,
-      },
+      }
     });
   </script>
   <!-- bootstrap js -->

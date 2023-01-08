@@ -113,11 +113,11 @@
     </article>
   </section>
 
-  <!-- clientes y marcas -->
-  <section id="clientes" class="customers-brands">
+  <!-- clientes  -->
+  <section id="clientes" class="customers-contain">
     <h2 class="clientes-title" data-aos="fade-up" data-aos-duration="2000">Nuestros clientes</h2>
     <article class="customers" data-aos="zoom-out" data-aos-duration="2000">
-      <div class="swiper mySwiper">
+      <div class="swiper customers-mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide"><img src="assets/clientes/1.png" alt="customer"></div>
           <div class="swiper-slide"><img src="assets/clientes/2.png" alt="customer"></div>
@@ -128,7 +128,7 @@
           <div class="swiper-slide"><img src="assets/clientes/7.png" alt="customer"></div>
           <div class="swiper-slide"><img src="assets/clientes/8.png" alt="customer"></div>
         </div>
-        <div class="swiper-pagination"></div>
+        <div class="customers-swiper-pagination"></div>
       </div>
     </article>
   </section>
@@ -144,7 +144,7 @@
   <!-- swiper js -->
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script>
-    var swiper = new Swiper(".mySwiper", {
+    var swiper = new Swiper(".customers-mySwiper", {
       slidesPerView: 4,
       spaceBetween: 25,
       centerSlide: true,
@@ -153,7 +153,7 @@
       loop: true,
       loopFillGroupWithBlank: true,
       pagination: {
-        el: ".swiper-pagination",
+        el: ".customers-swiper-pagination",
         clickable: true,
         dynamicBullets: true,
       },
