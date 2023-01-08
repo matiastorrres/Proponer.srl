@@ -1,0 +1,165 @@
+/********** video**************/
+
+.video {
+  display: flex;
+  justify-content: center;
+  opacity: 0.9;
+  position: relative;
+  min-height: 100vh;
+  max-height: 800px;
+  width: 100vw;
+}
+.video p {
+  position: absolute;
+  font-size: 7vw;
+  font-weight: bold;
+  text-align: center;
+  background-color: none;
+  top: 8rem;
+  color: #efefef;
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+}
+.video video {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+@media screen and (min-width: 768px) {
+  .video p {
+    top: 8rem;
+  }
+}
+
+/******* quienes somos **********/
+
+.aboutUs h2 {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid black;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  color: #a43f48;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.aboutUs {
+  position: relative;
+  margin: 2rem;
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+}
+
+.aboutText {
+  font-size: 4.5vw;
+  text-align: left;
+  padding: 0rem 1rem;
+  position: relative;
+  color: 00050;
+}
+.aboutText div {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 1rem;
+  shape-outside: circle();
+}
+.aboutText div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.aboutText div:first-child {
+  float: right;
+}
+
+.aboutText div:nth-child(4) {
+  float: left;
+}
+@media screen and (min-width: 576px) {
+  .aboutUs h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+  }
+  .aboutText div {
+    width: 250px;
+    height: 250px;
+  }
+  .aboutText {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .aboutUs h2 {
+    font-size: 5rem;
+  }
+  .aboutText {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    line-height: 3rem;
+  }
+  .aboutUs {
+    margin-top: 2rem;
+  }
+}
+
+/*clientes*/
+.customers-contain {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+}
+.customers-contain h2 {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid black;
+  font-size: 3rem;
+  color: #a43f48;
+  max-width: 1200px;
+  margin: 2rem 1rem;
+}
+.swiper {
+  height: 10rem;
+}
+.swiper-slide img {
+  width: 80vw;
+  height: inherit;
+  object-fit: contain;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 576px) {
+  .customers-contain h2 {
+    font-size: 4rem;
+  }
+  .customers-contain {
+    margin-top: 8rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .customers-contain h2 {
+    font-size: 5rem;
+  }
+  .swiper {
+    height: 15rem;
+  }
+  .swiper-slide img {
+    height: inherit;
+    object-fit: cover;
+  }
+  .customers-contain {
+    margin-bottom: 0rem;
+  }
+}

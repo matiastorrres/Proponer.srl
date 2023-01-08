@@ -5,22 +5,18 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- ??????? -->
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet"> -->
-  <!-- title -->
+  <!-- Title -->
   <title>PROPONER SRL</title>
-  <!-- pedir descripcion de lo que ofrece -->
+  <!-- Description -->
   <meta name="description" content="Ingenieria - Equipos CNC - Maquinas y herramientas - Obras">
   <!-- agregar url original -->
-  <link rel="canonical" href="http://www.proponer.com.ar/#inicio">
+  <link rel="canonical" href="http://www.proponer.com.ar/index.html">
   <!-- Favicon -->
   <link rel="icon" href="assets/logo.png">
   <link rel="apple-touch-icon" href="assets/logo.png">
-  <!-- color de url -->
+  <!-- Url color -->
   <meta name="theme-color" content="#a43f48">
-  <!-- meta-etiquetas para redes sociales -->
+  <!-- Meta-tag for social network -->
   <meta property="og:title" content="PROPONER SRL| Ingenieria y automatización">
   <meta property="og:descripcion" content="Ingenieria - Equipos CNC - Maquinas y herramientas - Obras">
   <meta property="og:image" content="http://www.proponer.com.ar/ssets/fondo.jpg">
@@ -31,16 +27,14 @@
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="300">
   <meta property="og:image:height" content="300">
+
   <!-- hoja de estilos -->
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="contacto.css">
-  <!-- iconos de bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-  <!-- bootstrap css -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
   <!-- Swiper css -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
   <!-- animate on scroll library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
@@ -74,11 +68,11 @@
   </header>
 
   <!-- formulario -->
-
   <section id="contacto">
     <h2 data-aos="fade-down" data-aos-duration="3000">Trabajemos juntos</h2>
     <div class="contact-map">
-      <article class="contact">
+      <article class="contact" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine"
+        data-aos-duration="2000">
         <form class="contact-form" action="https://formsubmit.co/proponeringenieria@yahoo.com.ar" method="POST"
           target="_blank">
           <legend>Envianos tus consultas</legend>
@@ -98,7 +92,8 @@
           </div>
         </form>
       </article>
-      <article class="map">
+      <article class="map" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
+        data-aos-duration="2000">
         <h3>
           <div>
             <img src="./assets/logo.png" alt="logo" class="logo-map" />
@@ -142,7 +137,7 @@
   </section>
 
   <!-- marcas -->
-  <section class="swiper mySwiper">
+  <section class="swiper mySwiper" data-aos="zoom-out" data-aos-duration="3000">
     <div class="swiper-wrapper">
       <div class="swiper-slide"><img src="assets/marcas/m1.png" alt="brands"></div>
       <div class="swiper-slide"><img src="assets/marcas/m2.png" alt="brands"></div>
@@ -155,10 +150,10 @@
     </div>
   </section>
 
-
-
+  <!-- btn-menu -->
   <script src="script.js"></script>
-  <!-- swiper js averiguar poque no sirve el export -->
+
+  <!-- swiper js -->
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script>
     var swiper = new Swiper(".mySwiper", {
@@ -197,10 +192,6 @@
       }
     });
   </script>
-  <!-- bootstrap js -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
 
   <!-- script background -->
   <script>
@@ -649,11 +640,70 @@
       animateSections: true
     })
   </script>
+
   <!--  script animate on scroll library -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
+
+  <!-- Form -->
+  <script>
+    (() => {
+      const $form = document.querySelector(".contact-form");
+      const $inputs = document.querySelectorAll(".contact-form *[required]");
+
+      $inputs.forEach((input) => {
+        const $span = document.createElement("span");
+        $span.id = input.name;
+        $span.textContent = input.title;
+        $span.classList.add("contact-form-error", "none");
+        input.insertAdjacentElement("afterend", $span);
+      });
+      document.addEventListener("keyup", (e) => {
+        if (e.target.matches(".contact-form [required]")) {
+          if (
+            (e.target.pattern || e.target.dataset.pattern) &&
+            e.target.value !== ""
+          ) {
+            // console.log("el input tiene expresion regular", e.target.pattern);
+            let regex = new RegExp(e.target.pattern || e.target.dataset.pattern);
+
+            return !regex.exec(e.target.value)
+              ? document.getElementById(e.target.name).classList.add("is-active")
+              : document
+                .getElementById(e.target.name)
+                .classList.remove("is-active");
+          }
+          if (
+            !e.target.pattern &&
+            !e.target.dataset.pattern &&
+            e.target.value !== ""
+          ) {
+            // console.log("el input no tiene expresion regular");
+            return e.target.value === ""
+              ? document.getElementById(e.target.name).classList.add("is-active")
+              : document
+                .getElementById(e.target.name)
+                .classList.remove("is-active");
+          }
+        }
+      });
+      document.addEventListener("submit", (e) => {
+        // e.preventDefault(); //en este caso hace falta desactivar
+        const $loader = document.querySelector(".contact-form-loader");
+        const $response = document.querySelector(".contact-form-response");
+        $loader.classList.remove("none");
+        setTimeout(() => {
+          $loader.classList.add("none");
+          $response.classList.remove("none");
+          $form.reset();
+          setTimeout(() => $response.classList.add("none"), 3000);
+        }, 3000);
+      });
+    })();
+  </script>
+
 </body>
 
 </html>
