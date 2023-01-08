@@ -396,13 +396,14 @@ ul {
 .swiper-slide img {
   height: 100px;
   width: 100%;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .swiper {
     margin-bottom: 0;
   }
   .swiper-slide img {
-    height: 120px;
+    height: 100px;
     width: 100%;
   }
 }

@@ -489,8 +489,8 @@ ul {
   margin: 0 auto;
   text-align: center;
   font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
-  margin-bottom: 5rem;
   margin-top: 5rem;
+  margin-bottom: 4rem;
 }
 .customers-contain h2 {
   text-align: center;
@@ -499,33 +499,18 @@ ul {
   justify-content: center;
   border: 5px solid black;
   font-size: 3rem;
-  margin-bottom: 3rem;
   color: #a43f48;
   max-width: 1200px;
   margin: 2rem 1rem;
 }
-.customers {
-  height: 35vh;
-  padding: 1rem;
-}
 .swiper {
-  width: 100%;
-  height: 100%;
+  height: 10rem;
 }
-.customers-swiper-slide {
-  text-align: center;
-  font-size: 18px;
-}
-.customers-swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.customers-swiper-slide img {
-  display: block;
-  width: 90%;
-  height: 90%;
-  object-fit: cover;
+.swiper-slide img {
+  width: 80vw;
+  height: inherit;
+  object-fit: contain;
+  background-color: #fff;
   cursor: pointer;
 }
 
@@ -541,5 +526,15 @@ ul {
 @media screen and (min-width: 992px) {
   .customers-contain h2 {
     font-size: 5rem;
+  }
+  .swiper {
+    height: 15rem;
+  }
+  .swiper-slide img {
+    height: inherit;
+    object-fit: cover;
+  }
+  .customers-contain {
+    margin-bottom: 0rem;
   }
 }
