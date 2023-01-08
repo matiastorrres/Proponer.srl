@@ -41,6 +41,9 @@
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <!-- Swiper css -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <!-- animate on scroll library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -75,7 +78,7 @@
 
   <!-- proyectos destacados -->
   <section id="Trabajos" class="works">
-    <h2>Proyectos Destacados</h2>
+    <h2 data-aos="fade-down" data-aos-duration="3000">Proyectos Destacados</h2>
     <div class="container-card-works">
       <article class="card-work">
         <h4>Retrofitting Torno Moriseiki SL-7</h4>
@@ -610,8 +613,11 @@
       animateSections: true
     })
   </script>
-  <!-- script titulo -->
-
+  <!--  script animate on scroll library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

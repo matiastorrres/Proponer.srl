@@ -41,6 +41,8 @@
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <!-- Swiper css -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <!-- animate on scroll library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -76,9 +78,10 @@
 
   <!-- servicios -->
   <section id="servicios" class="services">
-    <h2>Servicios</h2>
+    <h2 data-aos="fade-down" data-aos-duration="3000">Servicios</h2>
     <div class="container-card-service">
-      <article class="card-service">
+
+      <article class="card-service" data-aos="fade-right" data-aos-duration="3000">
         <h3>Ingeniería</h3>
         <img src="assets/ingenieria.jpg" alt="Ingeniería">
         <div class="card-service-text">
@@ -86,7 +89,7 @@
           <p>Estudios energéticos.</p>
         </div>
       </article>
-      <article class="card-service">
+      <article class="card-service" data-aos="fade-right" data-aos-duration="2000">
         <h3>Equipos CNC y Máquinas herramientas</h3>
         <img src="assets/Maquinaria-CNC.jpg" alt="Equipos CNC y Máquinas herramientas">
         <div class="card-service-text">
@@ -94,7 +97,7 @@
           <p>Reparaciones electrónicas y mecánicas de tornos Turri, Leblón, Mazak, Moriseiki.</p>
         </div>
       </article>
-      <article class="card-service">
+      <article class="card-service" data-aos="fade-right" data-aos-duration="1000">
         <h3>Fabricación de Máquinas y Equipos</h3>
         <img src="assets/Maquinas.jpg" alt="Fabricación de Máquinas y Equipos">
         <div class="card-service-text">
@@ -106,7 +109,7 @@
         </div>
 
       </article>
-      <article class="card-service">
+      <article class="card-service" data-aos="fade-left" data-aos-duration="3000">
         <h3> Obras</h3>
         <img src="assets/obras.png" alt="Obras">
         <div class="card-service-text">
@@ -117,7 +120,7 @@
             reparación de bancos de capacitores.</p>
         </div>
       </article>
-      <article class="card-service">
+      <article class="card-service" data-aos="fade-left" data-aos-duration="2000">
         <h3>Mantenimiento y reparación</h3>
         <img src="assets/torno.jpg" alt="Mantenimiento y reparación">
         <div class="card-service-text">
@@ -125,7 +128,7 @@
           <p>Transformadores de media tensión (hasta 66kV). Tableros eléctricos. Termografías.</p>
         </div>
       </article>
-      <article class="card-service">
+      <article class="card-service" data-aos="fade-left" data-aos-duration="1000">
         <h3>Calibraciones y certificaciones</h3>
         <img src="assets/Calibrando.jpg" alt="Calibraciones y certificaciones">
         <div class="card-service-text">
@@ -632,7 +635,11 @@
       animateSections: true
     })
   </script>
-
+  <!--  script animate on scroll library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

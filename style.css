@@ -1,11 +1,13 @@
 /* ********** Custom Properties ********** */
+/*instalando fuente externa*/
 @font-face {
   font-family: bankGothic;
   src: url(assets/bankrus.ttf);
+  font-display: swap;
 }
 :root {
   --max-width: 1200px;
-  --header-height: 4rem;
+  /* --header-height: 4rem; */
 }
 
 /* ********** Reset ********** */
@@ -21,7 +23,19 @@ html {
 *::before {
   box-sizing: inherit;
 }
-
+h2 {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid black;
+  font-size: 5rem;
+  margin-bottom: 3rem;
+  color: #a43f48;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
 body {
   /* background-color: #403060;
   background-image: radial-gradient(
@@ -35,7 +49,6 @@ body {
   background-size: cover; */
   margin: 0;
   overflow-x: hidden;
-  overflow-y: hidden;
 }
 
 /* para eliminar la barra de desplazamiento horizontal que generan la imagenes grandes*/
@@ -58,7 +71,6 @@ ul {
   height: auto;
   display: flex;
   justify-content: center;
-  position: relative;
   opacity: 0.9;
   position: relative;
   overflow-y: hidden;
@@ -68,10 +80,10 @@ ul {
   font-size: 7vw;
   font-weight: bold;
   text-align: center;
-  color: #fff;
   background-color: none;
-  top: 12rem;
+  top: 8rem;
   color: #efefef;
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
 }
 
 .video video {
@@ -107,8 +119,9 @@ ul {
   bottom: 0;
   z-index: 999;
   width: 100%;
-  height: var(--header-height);
+  height: 4rem;
   border-top: 1px black solid;
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
 }
 .header > .container {
   display: flex;
@@ -156,9 +169,16 @@ ul {
     display: none;
   }
 }
+
+@media screen and (min-width: 768px) {
+}
+.header h1 {
+  font-size: 2rem;
+}
+
 @media screen and (min-width: 992px) {
   .header h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -167,7 +187,7 @@ ul {
   position: fixed;
   left: 0;
   top: 0;
-  bottom: var(--header-height);
+  bottom: 4rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -209,22 +229,38 @@ ul {
     background-color: transparent;
   }
   .menu a {
-    font-size: 1rem;
-    color: #000;
+    font-size: 1.2rem;
     color: #a43f48;
+    transition: color 3s ease;
+    position: relative;
+  }
+  .menu a::before {
+    content: "";
+    position: absolute;
+    background-color: #a43f48;
+    bottom: 1rem;
+    width: 85%;
+    text-align: center;
+    height: 3px;
+    transition: transform 0.5s ease-in-out;
+    transform: scale(0);
+    transform-origin: right;
+  }
+  .menu a:hover::before {
+    transform: scale(1);
+    transform-origin: left;
+  }
+
+  .menu a:hover {
+    color: #000;
   }
   .menu a:last-child {
     padding-right: 0;
   }
-  .menu a:hover {
-    color: #efefef;
-    background-color: transparent;
-    color: #000;
-  }
 }
 @media screen and (min-width: 992px) {
   .menu a {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -249,84 +285,101 @@ ul {
 
 .aboutUs h2 {
   text-align: center;
-  background-color: #efefef;
-  height: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 5px solid black;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  color: #a43f48;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.aboutUs {
+  position: relative;
+  margin: 2rem;
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
 }
 
-.aboutImg {
-  display: none;
-  background-color: transparent;
-}
 .aboutText {
-  font-size: 1rem;
+  font-size: 4.5vw;
   text-align: left;
   padding: 0rem 1rem;
+  position: relative;
+  color: 00050;
+}
+.aboutText div {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 1rem;
+  shape-outside: circle();
+}
+.aboutText div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.aboutText div:first-child {
+  float: right;
+}
+
+.aboutText div:nth-child(4) {
+  float: left;
 }
 @media screen and (min-width: 576px) {
   .aboutUs h2 {
-    height: 6rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 4rem;
+  }
+  .aboutText div {
+    width: 250px;
+    height: 250px;
   }
   .aboutText {
     font-size: 1.3rem;
   }
 }
 @media screen and (min-width: 992px) {
-  .aboutUs article {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    min-height: 70vh;
-  }
-  .aboutImg {
-    background-color: transparent;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    height: 75vh;
-  }
-
-  .aboutUs img {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-  }
-  .aboutImg :first-child {
-    position: absolute;
-    top: 50px;
-    left: 10px;
-  }
-  .aboutImg :nth-child(2) {
-    position: absolute;
-    top: 300px;
-    right: 10px;
+  .aboutUs h2 {
+    font-size: 5rem;
   }
   .aboutText {
-    padding: 1rem 2rem;
-    width: 50%;
-    font-size: 1.2rem;
-    font-weight: bold;
-    line-height: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    line-height: 3rem;
+  }
+  .aboutUs {
+    margin-top: 2rem;
   }
 }
-
 /**********services***********/
+.services {
+  margin: 0 auto;
+}
+
 .services h2 {
   text-align: center;
-  background-color: #efefef;
-  height: 6rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 3px solid black;
+  font-size: 5rem;
+  margin-bottom: 3rem;
+  color: #a43f48;
+  max-width: 1200px;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  margin-top: 2rem;
+  padding: 0.5rem;
 }
 .container-card-service h3 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   padding: 1rem;
 }
 .container-card-service {
@@ -334,6 +387,7 @@ ul {
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
+  margin: 1rem;
 }
 .card-service {
   width: 100vw;
@@ -351,8 +405,10 @@ ul {
   object-fit: cover;
 }
 .card-service-text {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
   padding: 1rem;
+  user-select: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -366,6 +422,7 @@ ul {
     max-width: 1200px;
     margin: 0 auto;
     height: 85%;
+    margin-bottom: 4rem;
   }
   .card-service {
     width: 375px;
@@ -380,6 +437,9 @@ ul {
     margin-left: auto;
     margin-right: auto;
     padding-top: 6rem;
+  }
+  .card-service-text {
+    font-size: 1rem;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -429,12 +489,18 @@ ul {
   min-height: 100vh;
 }
 .works h2 {
+  margin-top: 2rem;
   text-align: center;
-  background-color: #efefef;
-  height: 6rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 5px solid black;
+  font-size: 5rem;
+  margin-bottom: 3rem;
+  color: #a43f48;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .container-card-works {
   display: flex;
@@ -492,17 +558,24 @@ ul {
 
 /*clientes*/
 .customers-brands {
-  height: 100vh;
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
 }
 .customers-brands h2 {
-  background-color: #efefef;
-  height: 4rem;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 5px solid black;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  color: #a43f48;
+  max-width: 1200px;
+  margin: 2rem 1rem;
 }
 .customers {
   height: 35vh;
@@ -512,7 +585,6 @@ ul {
   width: 100%;
   height: 100%;
 }
-
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -529,19 +601,25 @@ ul {
   object-fit: cover;
   cursor: pointer;
 }
-.brands {
-  height: 25vh;
-}
-.brands-title {
-  margin-top: 2rem;
-}
-@media screen and (min-width: 768px) {
-  .customers-brands {
-    padding-top: 6rem;
-  }
+
+@media screen and (min-width: 576px) {
   .customers-brands h2 {
-    height: 5rem;
+    font-size: 4rem;
   }
+  .customers-brands {
+    margin-top: 8rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .customers-brands h2 {
+    font-size: 5rem;
+  }
+}
+
+/* marcas */
+.brands {
+  height: 8rem;
 }
 
 /*formulario y mapa*/
@@ -552,7 +630,6 @@ ul {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  min-height: 100vh;
 }
 
 .contact h2 {
@@ -686,8 +763,23 @@ ul {
   width: 100%;
 }
 @media screen and (min-width: 768px) {
+  #contacto {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  #contacto h2:first-child {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid black;
+    font-size: 5rem;
+    color: #a43f48;
+    max-width: 1200px;
+    margin: 1rem;
+    margin-top: 8rem;
+  }
   .contact-map {
-    padding-top: 6rem;
+    padding-top: 2rem;
   }
 }
 @media screen and (min-width: 992px) {

@@ -41,10 +41,14 @@
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <!-- Swiper css -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <!-- animate on scroll library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
   <!-- HEADER -->
+
+
   <header class="header">
     <section class="container">
       <div class="logo">
@@ -73,30 +77,32 @@
     </section>
   </header>
 
+
   <!-- Video -->
   <section id="inicio" class="Home video">
-    <p>Bienvenidos a Proponer SRL.<br>INGENIERÍA Y AUTOMATIZACIÓN</p>
+    <p data-aos="flip-left" data-aos-duration="2000">Bienvenidos a Proponer SRL.<br>INGENIERÍA Y AUTOMATIZACIÓN</p>
     <video src="./assets/videos/portada.mp4" autoplay muted loop playsinline></video>
   </section>
 
   <!-- quienes somos -->
-  <section id="quienesSomos" class="aboutUs section">
-    <h2>Quienes somos</h2>
+  <section id="quienesSomos" class="aboutUs">
+    <h2 data-aos="fade-up" data-aos-duration="2000">Quienes somos</h2>
     <article>
-      <div class="aboutImg">
-        <img src="assets/nosotros1.jpg" alt="nosotros1">
-        <img src="assets/nosotros2.jpg" alt="nosotros2">
-      </div>
       <div class="aboutText">
-        <p>La empresa comienza su actividad en 1989 como proveedor de industrias de
+        <div data-aos="fade-right"><img src="assets/nosotros1.jpg" alt="nosotros1"></div>
+        <p data-aos="fade-up" data-aos-duration="2000">La empresa comienza su actividad en 1989 como proveedor de
+          industrias de
           primera línea en Mendoza, realizando tareas tanto en el área de
           mantenimiento, como en el desarrollo de planos para la automatización de
           procesos de servicio continuo.</p>
-        <p>La cantidad de obras de gran envergadura, e importancia realizada, sería
+        <p data-aos="fade-up" data-aos-duration="2000">La cantidad de obras de gran envergadura, e importancia
+          realizada, sería
           difícil de detallar, ya que la confianza puesta, por parte de nuestros clientes
           en nuestros proyectos, nos han dado gran cantidad de oportunidades para
           demostrar quienes somos.</p>
-        <p>La empresa cuenta con experiencia probada en todos los servicios que
+        <div data-aos="fade-left"><img src="assets/nosotros2.jpg" alt="nosotros2"></div>
+        <p data-aos="fade-up" data-aos-duration="3000">La empresa cuenta con experiencia probada en todos los servicios
+          que
           brinda.
           <br>
           Nuestro objetivo siempre ha sido puesto en la colaboración, apoyando al
@@ -109,8 +115,8 @@
 
   <!-- clientes y marcas -->
   <section id="clientes" class="customers-brands">
-    <h2 class="clientes-title">Algunos de nuestros clientes</h2>
-    <article class="customers">
+    <h2 class="clientes-title" data-aos="fade-up" data-aos-duration="2000">Nuestros clientes</h2>
+    <article class="customers" data-aos="zoom-out" data-aos-duration="2000">
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide"><img src="assets/clientes/1.png" alt="customer"></div>
@@ -122,26 +128,6 @@
           <div class="swiper-slide"><img src="assets/clientes/7.png" alt="customer"></div>
           <div class="swiper-slide"><img src="assets/clientes/8.png" alt="customer"></div>
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
-      </div>
-    </article>
-    <h2 class="brands-title"> Nuestras marcas</h2>
-    <article class="brands">
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="assets/marcas/m1.png" alt="brands"></div>
-          <div class="swiper-slide"><img src="assets/marcas/m2.png" alt="brands"></div>
-          <div class="swiper-slide"><img src="assets/marcas/m3.png" alt="brands"></div>
-          <div class="swiper-slide"><img src="assets/marcas/m4.png" alt="brands"></div>
-          <div class="swiper-slide"><img src="assets/marcas/m5.png" alt="brands"></div>
-          <div class="swiper-slide"><img src="assets/marcas/m6.png" alt="brands"></div>
-          <div class="swiper-slide"><img src="assets/marcas/m7.png" alt="brands"></div>
-          <div class="swiper-slide"><img src="assets/marcas/m8.png" alt="brands"></div>
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
       </div>
     </article>
@@ -150,7 +136,12 @@
 
 
   <script src="script.js"></script>
-  <!-- swiper js averiguar poque no sirve el export -->
+  <!--  script animate on scroll library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <!-- swiper js -->
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script>
     var swiper = new Swiper(".mySwiper", {
@@ -165,10 +156,6 @@
         el: ".swiper-pagination",
         clickable: true,
         dynamicBullets: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
       },
       breakpoints: {
         0: {
@@ -641,6 +628,7 @@
       animateSections: true
     })
   </script>
+
 
 </body>
 
